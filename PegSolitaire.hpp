@@ -8,10 +8,10 @@ struct EnglishBoard {
     int peg_count() const {
         int count = 0;
 
-
         for(auto& row : table) {
             count += std::count(row.begin(), row.end(), '.');
         }
+
         return count;
     }
 };
@@ -28,9 +28,9 @@ void print(EnglishBoard board) {
 EnglishBoard get_english_board() {
     EnglishBoard board;
 
-    for (int row = 0; row < board.table.size(); row++) {
+    for (size_t row = 0; row < board.table.size(); row++) {
         auto &row_ref = board.table[row];
-        for (int col = 0; col < row_ref.size(); col++) {
+        for (size_t col = 0; col < row_ref.size(); col++) {
             if (row < 2 || row > 4) {
                 if (col < 2 || col > 4) {
                     row_ref[col] = ' ';
