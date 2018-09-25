@@ -1,23 +1,21 @@
-#include "PegSolitaire.hpp"
-#include <iostream> 
+#include "PegSolitare.h"
+#include <iostream>
 
-int main(){
 
-  auto const english_board = get_english_board();
+int main() {
 
-  print(english_board); // english_board->print(); ??
-  std::cout << "Peg count: " << english_board.peg_count() << "\n";
+    auto * pegSolitare = new PegSolitare;
 
-// Output
-//
-//   ···
-//   ···
-// ·······
-// ···o···
-// ·······
-//   ···
-//   ···
-//
-// Peg count: 32  
-  return 0;
+    auto const english_board = pegSolitare->get_english_board();
+
+    for(int i=0; i< 7; i++) {
+        for(int j=0; j< 7; j++) {
+            std::cout << english_board[i][j];
+        }
+        std::cout << "\n";
+    }
+
+    std::cout << "Peg count: " << pegSolitare->peg_count(english_board) << "\n";
+
+    return 0;
 }
