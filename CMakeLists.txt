@@ -3,4 +3,4 @@ project(demo)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(demo main.cpp PegSolitare.cpp PegSolitare.h)
+add_executable(demo main.cpp PegSolitaire.cpp PegSolitaire.h)
