@@ -2,6 +2,7 @@
 #define DEMO_PEGSOLITARE_H
 
 #include <array>
+#include <string>
 
 
 class PegSolitaire {
@@ -18,11 +19,11 @@ public:
         PEG = 'P', NO_PEG = 'O', INVALID = '#'
     };
 
-    int peg_count();
+    int peg_count() const;
 
     void init_board(BoardType type);
 
-    std::string print_board();
+    std::string print_board() const;
 
 };
 

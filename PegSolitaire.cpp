@@ -1,10 +1,10 @@
 #include <algorithm>
-#include "PegSolitaire.h"
-#include <iostream>
 #include <numeric>
 
+#include "PegSolitaire.h"
 
-int PegSolitaire::peg_count() {
+
+int PegSolitaire::peg_count() const {
 
     int count = 0;
 
@@ -29,15 +29,13 @@ void PegSolitaire::init_board(PegSolitaire::BoardType type) {
     }
 }
 
-std::string PegSolitaire::print_board() {
+std::string PegSolitaire::print_board() const {
 
     std::string output;
-    auto rowReducer = [&](std::string output, char value) { return output.append(1, value); };
+    auto rowReducer = [](std::string output, char value) { return output.append(1, value); };
 
     for (auto &row:board) {
-        std::string rowPrint;
-        output.append(std::accumulate(row.begin(), row.end(), rowPrint, rowReducer).append("\n"));
-
+        output.append(std::accumulate(row.begin(), row.end(), std::string(), rowReducer).append("\n"));
     }
 
     return output;
