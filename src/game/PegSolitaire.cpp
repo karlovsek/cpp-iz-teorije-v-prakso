@@ -47,7 +47,7 @@ State PegSolitaire::getNextState(State &parentState) const {
 
     const unsigned long height = nextState.data.size();
 
-    const Direction directions[] = {UP, DOWN, LEFT, RIGHT};
+    const Direction directions[] = {DOWN, RIGHT, LEFT, UP};
 
     for (int i = 0; i < height && !nextState.moveFound; i++) {
 
