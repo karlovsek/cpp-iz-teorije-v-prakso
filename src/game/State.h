@@ -1,29 +1,24 @@
-//
-// Created by dparadiz on 9/27/18.
-//
-
 #ifndef DEMO_STATE_H
 #define DEMO_STATE_H
 
 #include <vector>
+#include <tuple>
+#include <memory>
 
-class State {
 
+struct State {
     std::vector<std::vector<int>> data;
+    std::vector<std::tuple<int, int, int>> moveHistory;
+    std::shared_ptr<State> parentState = nullptr;
+    bool moveFound = false;
 
-    unsigned long width;
-    unsigned long height;
+    State(const State &state);
 
-
-public:
     State(unsigned long width, unsigned long height);
-    void populate(int x, int y, int value);
-    void populate(int x, std::vector<int> column);
 
-    std::vector<std::vector<int>> get_data() const;
+    void addMoveToHistory(std::tuple<int, int, int> move);
 
-
-
+    bool wasMoveAlreadyTried(std::tuple<int, int, int> move) const;
 };
 
 

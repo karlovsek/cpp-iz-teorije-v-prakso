@@ -4,30 +4,34 @@
 #include <array>
 #include <string>
 #include "State.h"
-#include "GameInterface.h"
 
 
-class PegSolitaire: public GameInterface  {
+class PegSolitaire {
 
-private:
-    State state = State(7, 7);
 
 public:
     enum BoardType : char {
         ENGLISH_BOARD = '1'
     };
-
+    enum Direction : int {
+        UP = 3, DOWN = 0, LEFT = 1, RIGHT = 2
+    };
     enum Peg : int {
         PEG = 1, NO_PEG = 0, INVALID = 2
     };
 
-    int peg_count() const;
+    int pegCount(State state) const;
+    int type;
 
-    void init_state(BoardType type);
+    explicit PegSolitaire(BoardType _type);
 
-    void makeMove() override;
-    State getState() const override;
-    bool isFinished() const override;
+    State getInitialState() const;
+
+    State getNextState(State &state) const;
+
+    bool isFinished(const State &state) const;
+
+    bool isComplete(const State &state) const;
 
 };
 
