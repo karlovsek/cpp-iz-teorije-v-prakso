@@ -41,7 +41,6 @@ State PegSolitaire::getNextState(State &parentState) const {
     // create copy of state data;
     State nextState = parentState;
 
-    nextState.parentState = std::make_shared<State>(parentState);
     nextState.moveFound = false;
 
 

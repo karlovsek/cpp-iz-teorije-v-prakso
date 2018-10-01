@@ -3,13 +3,11 @@
 
 #include <vector>
 #include <tuple>
-#include <memory>
 
 
 struct State {
     std::vector<std::vector<int>> data;
     std::vector<std::tuple<int, int, int>> moveHistory;
-    std::shared_ptr<State> parentState = nullptr;
     bool moveFound = false;
 
     State(const State &state);

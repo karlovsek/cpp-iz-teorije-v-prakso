@@ -5,7 +5,6 @@ State::State(const State &state) {
     data = state.data;
     moveHistory = state.moveHistory;
     moveFound = state.moveFound;
-    parentState = state.parentState;
 }
 
 State::State(unsigned long width, unsigned long height) {
