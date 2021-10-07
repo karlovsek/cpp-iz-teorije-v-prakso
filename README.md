@@ -26,23 +26,48 @@ For the version with 33 holes and 32 pegs (The English Board) of Peg Solitaire t
 An algorithm which blindly checks all the possibilities will not work quickly, and even with a very fast machine it would take years to solve.
 
 ```
-Initial board:
-  111  
-  111  
+  Start solving:
+  111
+  111
 1111111
 1110111
 1111111
-  111  
+  111
+  111
+---------------
+  111
+  111
+1111111
+1110111
+1111111
+  111
   111
 
-Final board:
-  000  
-  000  
+  111
+  111
+1111111
+1111001
+1111111
+  111
+  111
+
+[ ... omitted ...]
+
+  000
+  000
+0000000
 0000000
 0001000
+  010
+  000
+
+  000
+  000
 0000000
-  000  
-  000  
+0000000
+0000000
+  000
+  010
 ```
 Screenshots from the program and one of a solution:
 
