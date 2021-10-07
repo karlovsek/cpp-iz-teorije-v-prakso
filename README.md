@@ -16,7 +16,7 @@ The game starts with all the holes on the board filled with a peg except the hol
 
 Winning the game.
 ----------------------
-The game is won when all of the pegs are removed except one, which is in the center hole. 
+The game is won when all of the pegs are removed except one (the position of the last peg can be on arbitrary field). 
 More: http://www.ehow.com/list_6181682_peg-solitaire-rules.html
 
 Problem complexity
