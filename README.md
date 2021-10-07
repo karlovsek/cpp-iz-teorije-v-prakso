@@ -21,7 +21,7 @@ More: http://www.ehow.com/list_6181682_peg-solitaire-rules.html
 
 Problem complexity
 ----------------------
-For the version with 33 holes (and 32 pegs) of Peg Solitaire there are 577,116,156,815,309,849,672 different game sequences (577+ quintillion possible games), with 40,861,647,040,079,968 solutions. (Source: http://www.durangobill.com/Peg33.html).
+For the version with 33 holes and 32 pegs (The English Board) of Peg Solitaire there are 577,116,156,815,309,849,672 different game sequences (577+ quintillion possible games), with 40,861,647,040,079,968 solutions. (Source: http://www.durangobill.com/Peg33.html).
 
 An algorithm which blindly checks all the possibilities will not work quickly, and even with a very fast machine it would take years to solve.
 
